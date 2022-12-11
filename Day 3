@@ -1,3 +1,4 @@
+
 print("Welcome to the tresure island !! ")
 print("Your mission is to find the tresure !")
 if (input("Which direction do you want to go left or right ?"))=="left":
