@@ -1,0 +1,8 @@
+# Function with output
+
+def format_name(f_name,l_name):
+    title_f = f_name.title()
+    title_l = l_name.titile()
+    return f"{title_f}{title_l}"
+    
+print(format_name(input("What is your first name ?"),input("What is your last name ?")))
