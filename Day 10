@@ -55,11 +55,18 @@ def divide(a,b):
 operation = {"+":add,"-":substract,"*":multiply,"/":divide}
 
 num1 = int(input("Please enter the first number\n"))
-num2 = int(input("Please enter the second number\n"))
-for i in operation:
-    print(i)
-sign = input("Which operation do you want to do ")
-calculation = operation[sign]
-answer = calculation(num1,num2)
+should = True
 
-print(f"{num1} {sign} {num2} = {answer}")
+while should:
+    for i in operation:    
+        print(i)    
+    sign = input("Which operation do you want to do ")  
+    num2 = int(input("Please enter the second number\n"))   
+    calculation = operation[sign] 
+    answer = calculation(num1,num2)
+    
+    print(f"{num1} {sign} {num2} = {answer}")
+    if  input(f"Type 'y' to continue calculating with {answer} or type'n' to exit ") == "y":
+        num1 = answer
+    else:
+        should = False
