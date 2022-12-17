@@ -1,5 +1,5 @@
 # Function with output
-
+'''
 def format_name(f_name,l_name):
     formated_f_name = f_name.title()
     formated_l_name = l_name.title()
@@ -7,25 +7,27 @@ def format_name(f_name,l_name):
     
 print(format_name(input("What is your first name ?"),
 input("What is your last name ?")))
-
+'''
 # Days in month codeing exercise
 
 
 def is_leap(year):
-    leap = False
     if year % 4 == 0:
         if year % 100 == 0:
             if year % 400 == 0:
-                leap = True
+                return True
             else:
-                leap = False
+                return False
         else:
-            leap = True
+            return True
     else:
-        leap = False
-    if leap = True
+        return False
+
 def days_in_month(year, month):
-  month_days = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]  
+    month_days = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+    if is_leap(year) and month == 2:
+        return 29
+    return month_days[month-1] 
   
   
 #🚨 Do NOT change any of the code below 
