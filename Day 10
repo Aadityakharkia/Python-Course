@@ -56,6 +56,10 @@ operation = {"+":add,"-":substract,"*":multiply,"/":divide}
 
 num1 = int(input("Please enter the first number\n"))
 num2 = int(input("Please enter the second number\n"))
-sign = input("Which operation do you want to do ")
 for i in operation:
     print(i)
+sign = input("Which operation do you want to do ")
+calculation = operation[sign]
+answer = calculation(num1,num2)
+
+print(f"{num1} {sign} {num2} = {answer}")
