@@ -79,7 +79,7 @@ def calcu():
         for i in operation:    
             print(i)    
         sign = input("Which operation do you want to do ")  
-        num2 = int(input("Please enter the second number\n"))   
+        num2 = int(input("Pleased enter the second number\n"))   
         calculation = operation[sign] 
         answer = calculation(num1,num2)
         
