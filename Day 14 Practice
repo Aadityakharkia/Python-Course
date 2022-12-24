@@ -1,0 +1,22 @@
+data = [{
+        'name': 'Instagram',
+        'follower_count': 346,
+        'description': 'Social media platform',
+        'country': 'United States'
+    },
+    {
+        'name': 'Cristiano Ronaldo',
+        'follower_count': 215,
+        'description': 'Footballer',
+        'country': 'Portugasl'
+    }]
+
+import random
+def account():
+    return random.choice(data)
+def check(guess,a_account,b_account):
+    if a_account > b_account:
+        return guess == "a"
+    else:
+        return guess == "b"
+
