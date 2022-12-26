@@ -1,6 +1,6 @@
 # Coffee Machine
 
-MENU = {
+menu = {
     "espresso": {
         "ingredients": {
             "water": 50,
@@ -26,9 +26,31 @@ MENU = {
     }
 }
 
-resources = {
+def resource():
+    resources = {
     "water": 300,
     "milk": 200,
-    "coffee": 100,
-}
+    "coffee": 100,}
+    return print(resources)
 
+# Ask User What Would They Like
+coffee = input("What would you like ? (espresso/latte/cappuccino) \n")
+# Print Report
+if coffee == "report":
+    resource()
+
+# Check resources sufficient ?
+make = True
+def check():
+    global coffee
+    global menu
+    if menu[coffee] == coffee:
+        for i in menu[coffee]['ingredients']:
+            print(i)
+
+check()
+# Process Coins
+
+# Check Transistion Successful
+
+# Make Coffee
