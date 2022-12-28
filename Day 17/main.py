@@ -11,5 +11,7 @@ for i in question_data:
 
 quize = QuizBrain(question_bank)
 
-while quize.still_has_question:
+while quize.still_has_question():
     quize.next_question()
+
+print("You've completed the quiz")
