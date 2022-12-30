@@ -14,4 +14,4 @@ quize = QuizBrain(question_bank)
 while quize.still_has_question():
     quize.next_question()
 
-print("You've completed the quiz")
+print("You've cfompleted the quiz")
