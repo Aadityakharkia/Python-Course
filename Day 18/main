@@ -1,0 +1,14 @@
+from turtle import Turtle,Screen
+
+tim = Turtle()
+
+
+tim.shape("turtle")
+tim.color("cyan2")
+
+for i in range(4):
+    tim.forward(100)
+    tim.left(90)
+
+screen = Screen()
+screen.exitonclick()
