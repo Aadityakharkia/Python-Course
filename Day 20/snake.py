@@ -4,11 +4,10 @@ distance = 20
 
 class Snake:
 
-    Starting_Position = [(0,0),(-20,0),(-40,0)]
-
     def __init__(self):
         self.segment = []
         self.create_snake()
+
 
     def create_snake(self):
         for i in Starting_Position():
@@ -24,3 +23,4 @@ class Snake:
             y=self.segment[i - 1].ycor()
             self.segment[i].goto(x,y)
         self.segment[0].forward(distance)
+    pass
