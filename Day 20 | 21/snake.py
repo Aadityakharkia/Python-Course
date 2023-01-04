@@ -27,7 +27,6 @@ class Snake:
 
     def extent(self):
         self.add_segment(self.segments[-1].position())
-        print(1)
 
     def move(self):
         for seg_num in range(len(self.segments) - 1, 0, -1):
