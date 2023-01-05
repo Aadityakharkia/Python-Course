@@ -17,6 +17,8 @@ score = Score()
 
 screen.listen()
 
+screen.onclick(r_paddle.go_up, "w")
+
 speed = 0.1
 is_game_on = True
 while is_game_on:
