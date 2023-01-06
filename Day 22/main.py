@@ -17,7 +17,11 @@ score = Score()
 
 screen.listen()
 
-screen.onclick(r_paddle.go_up, "w")
+screen.onkey(l_paddle.go_up, "w")
+screen.onkey(l_paddle.go_down, "s")
+screen.onkey(r_paddle.go_up, "Up")
+screen.onkey(r_paddle.go_down, "Down")
+
 
 speed = 0.1
 is_game_on = True
@@ -31,7 +35,6 @@ while is_game_on:
 
     if ball.distance(r_paddle) < 50 and ball.xcor() > 320 or ball.distance(l_paddle) < 50 and ball.xcor() > -320 :
         ball.bounce_x()
-        speed = speed/5
 
     if ball.xcor() > 380:
         ball.reset_position()
