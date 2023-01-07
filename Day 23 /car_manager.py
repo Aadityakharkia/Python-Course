@@ -3,7 +3,7 @@ import random
 COLORS = ["red", "orange", "yellow", "green", "blue", "purple"]
 STARTING_MOVE_DISTANCE = 5
 MOVE_INCREMENT = 10
-
+spawning_distance = [-200,-150,-100,-50,0,50,100,150,200,250]
 
 class CarManager():
     
@@ -17,7 +17,7 @@ class CarManager():
             new_car.shapesize(stretch_wid=1,stretch_len=2)
             new_car.penup()
             new_car.color(random.choice(COLORS))
-            random_y = random.randint(-250,250)
+            random_y = random.choice(spawning_distance)
             new_car.goto(300,random_y)
             self.all_cars.append(new_car)
             self.car_speed = STARTING_MOVE_DISTANCE
