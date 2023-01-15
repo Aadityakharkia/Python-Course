@@ -52,6 +52,7 @@ card_back_img = PhotoImage(file="images/card_back.png")
 card_background = canvas.create_image(400, 263, image=card_front_img)
 card_title = canvas.create_text(400, 150, text="", font=("Ariel", 40, "italic"))
 card_word = canvas.create_text(400, 263, text="", font=("Ariel", 60, "bold"))
+
 canvas.config(bg=BACKGROUND_COLOR, highlightthickness=0)
 canvas.grid(row=0, column=0, columnspan=2)
 
