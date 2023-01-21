@@ -4,6 +4,7 @@
 <div align="right">
 <h4>- challenge accepted</h4>
 <h5>(Aaditya Kharkia)</h5>
+</div>
 
 ![image-description](https://cdn.searchenginejournal.com/wp-content/uploads/2022/10/streamlit-tutorial-for-seos-6363b7c1bafc6-sej.png)
 
