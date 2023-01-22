@@ -1,4 +1,3 @@
-
 # Habit Tracker
 
 # Website -- https://pixe.la/
@@ -8,8 +7,8 @@ import requests
 from datetime import datetime
 
 
-token = "asdfghjjklkjhgfdsa"
-username = "aadityakharkia"
+token = "Your Token"
+username = "Your Username"
 
 headers = {
     "X-USER-TOKEN":token
@@ -21,8 +20,8 @@ pixela_endpoint = "https://pixe.la/v1/users"
 #---------------------- Setting up the environment & Creating a ID with a token and Username ---------------------
 
 parameters = {
-    "token":"asdfghjjklkjhgfdsa",
-    "username":"aadityakharkia",
+    "token":token
+    "username":username,
     "agreeTermsOfService":"yes",
     "notMinor":"yes"
 }
