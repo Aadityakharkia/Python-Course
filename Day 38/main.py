@@ -1,3 +1,5 @@
+# Making a habit tracker and uploading the data in google sheets in real time.
+
 import requests
 from datetime import datetime
 import os
@@ -8,6 +10,14 @@ APP_ID = os.environ["APP_ID"]
 API_KEY = os.environ["API_KEY"]
 API_USERNAME = os.environ["API_USERNAME"]
 API_PASSWORD = os.environ["API_PASSWORD"]
+
+# Or
+'''
+APP_ID = "Your ID"
+API_KEY = "Your Key"
+API_USERNAME = "Your Username"
+API_PASSWORD = "Your Password"
+'''
 
 headers = {
     "x-app-id":APP_ID,
