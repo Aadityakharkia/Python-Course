@@ -3,11 +3,14 @@ from datetime import datetime
 import smtplib
 import time
 
+#-------------------------------------------------------- Defining passwords and username ----------------------------------
+
 MY_EMAIL = "aadityakharkiates@gmail.com"
 MY_PASSWORD = "pxduwpgyfmtvtzmj"
 MY_LAT = 30.316496
 MY_LONG = 78.032188
 
+#------------------------------------------------------ Locating ISS location ----------------------------------------------
 
 def is_iss_overhead():
     response = requests.get(url="http://api.open-notify.org/iss-now.json")
@@ -20,6 +23,7 @@ def is_iss_overhead():
     if MY_LAT-5 <= iss_latitude <= MY_LAT+5 and MY_LONG-5 <= iss_longitude <= MY_LONG+5:
         return True
 
+#------------------------------------------------------ Comparing ISS location with my location ----------------------------
 
 def is_night():
     parameters = {
@@ -38,6 +42,8 @@ def is_night():
     if time_now >= sunset or time_now <= sunrise:
         return True
 
+#------------------------------------------------------ Sending the Email ---------------------------------------------------
+
 
 while True:
     time.sleep(60)
@@ -51,4 +57,8 @@ while True:
             msg="Subject:Look Up👆\n\nThe ISS is above you in the sky."
         )
 
+#------------------------------------------------------- Future Work -------------------------------------------------------
 
+# Sending SMS
+# Making it more accurate
+# Searching different location

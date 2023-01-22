@@ -1,7 +1,11 @@
-'''
 from twilio.rest import Client
+
+#----------------------------------Defining Twilio Account and learning about sending SMS --------------------
+
 account_sid = "AC3cc0660bec8ec35159d570a1e4237a04"
 auth_token = "edc4b778124cf0e9d7f9398d7658e5a0"
+
+
 client = Client(account_sid, auth_token)
 
 message = client.messages \
@@ -18,19 +22,9 @@ call = client.calls.create(
                     )
 
 print(message.sid)
-'''
 
-import requests
-API_Key = "c70b6a562b57de365ea7a2dd421eb8c0"
-URL = "http://api.openweathermap.org/data/2.5/weather?"
 
-PARAMETERS = {
-    "appid": API_Key,
-    "q": "Dudley",      # City where you live
-    "units": "metric"
-}
+#----------------------------------Future Work ------------------------------------------------------------------
 
-response = requests.get("api.openweathermap.org/data/2.5/forecast/daily",params=PARAMETERS)
-data = response.json()
-print(data)
-
+# Automating it 
+# Implementing different programmes with it

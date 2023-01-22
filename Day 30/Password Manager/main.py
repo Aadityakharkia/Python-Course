@@ -69,6 +69,7 @@ def find_password():
             messagebox.showinfo(title=wesite_2, message=f"Email:{email}\n Password:{password}")
         else:
             messagebox.showinfo(title="Error", message=f"No details for {wesite_2} exists")
+
 # ---------------------------- UI SETUP ------------------------------- #
 window = Tk()
 window.title("Pomodoro")
