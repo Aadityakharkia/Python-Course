@@ -1,4 +1,4 @@
-# Creating password manager.
+# Updating Password Manager.
 
 from tkinter import *
 from tkinter import messagebox
