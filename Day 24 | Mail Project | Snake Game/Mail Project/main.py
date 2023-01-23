@@ -1,3 +1,7 @@
+# Worked on Data and Files
+
+# The aim of the project is to get the data from input and create a output
+
 placeholder = "[name]"
 
 with open("./Input/Names/invited_names.txt") as names_file:

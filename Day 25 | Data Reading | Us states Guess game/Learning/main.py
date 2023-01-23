@@ -1,4 +1,5 @@
-'''
+# Weather Reading from given data
+
 import csv
 with open("weather_data.csv") as data_file:
     weather_data = csv.reader(data_file)
@@ -8,6 +9,9 @@ with open("weather_data.csv") as data_file:
             temperature.append(int(row[1]))
     print(temperature)
 
+#-----------------------------------------------
+
+# Different method to read the data
 
 import pandas
 
@@ -29,7 +33,9 @@ print(data.condition)
 
 print(data[data.temp == data.temp.max()])
 
-'''
+#----------------------------------------------------------------------------------
+
+# Worked on Squirrel data using pandas
 
 import pandas
 data = pandas.read_csv("2018_Central_Park_Squirrel_Census_-_Squirrel_Data.csv")
