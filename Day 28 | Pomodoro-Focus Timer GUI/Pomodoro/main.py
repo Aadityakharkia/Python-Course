@@ -1,3 +1,5 @@
+# Creating a timer clock to focus for work or study.
+
 from tkinter import *
 import math
 # ---------------------------- CONSTANTS ------------------------------- #
