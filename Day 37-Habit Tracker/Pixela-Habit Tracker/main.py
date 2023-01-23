@@ -20,7 +20,7 @@ pixela_endpoint = "https://pixe.la/v1/users"
 #---------------------- Setting up the environment & Creating a ID with a token and Username ---------------------
 
 parameters = {
-    "token":token
+    "token":token,
     "username":username,
     "agreeTermsOfService":"yes",
     "notMinor":"yes"

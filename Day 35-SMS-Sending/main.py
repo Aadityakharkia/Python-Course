@@ -2,8 +2,10 @@ from twilio.rest import Client
 
 #----------------------------------Defining Twilio Account and learning about sending SMS --------------------
 
-account_sid = "AC3cc0660bec8ec35159d570a1e4237a04"
-auth_token = "edc4b778124cf0e9d7f9398d7658e5a0"
+account_sid = "Your ID"
+auth_token = "Your Password"
+Twilio_number = "Your Twilio Number"
+Number = "Your Number"
 
 
 client = Client(account_sid, auth_token)
@@ -11,14 +13,14 @@ client = Client(account_sid, auth_token)
 message = client.messages \
                 .create(
                      body="It's Going to rain today. ",
-                     from_='+13607806746',
-                     to='+918092338438'
+                     from_=Twilio_number,   # Twilio Number
+                     to=Number      # Your Number
                  )
 
 call = client.calls.create(
                         url='http://demo.twilio.com/docs/voice.xml',
-                        from_='+13607806746',
-                        to='+918092338438'
+                        from_=Twilio_number,  # Twilio Number
+                        to=Number     # Your Number
                     )
 
 print(message.sid)

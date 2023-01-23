@@ -1,16 +1,23 @@
+# This programme focuses on making a UI Interface to learn words from different language
+# Remember to extract words to learn from data folder in order to learn.
+# You will face error once you have no words to learn. So if you face error detele the words to learn folder to rerun it.
+
 from tkinter import *
 import pandas
 import random
+
+#------------------------------------------- Defining Values and Variables-----------------------------------------
 
 BACKGROUND_COLOR = "#B1DDC6"
 current_card = {}
 to_learn = {}
 
+#--------------------------------------------- Raising Errors --------------------------------------------------------
+
 try:
     data = pandas.read_csv("data/words_to_learn.csv")
 except FileNotFoundError:
     original_data = pandas.read_csv("data/french_words.csv")
-    print(original_data)
     to_learn = original_data.to_dict(orient="records")
 else:
     to_learn = data.to_dict(orient="records")
@@ -34,11 +41,11 @@ def flip_card():
 
 def is_known():
     to_learn.remove(current_card)
-    print(len(to_learn))
     data = pandas.DataFrame(to_learn)
     data.to_csv("data/words_to_learn.csv", index=False)
     next_card()
 
+#---------------------------------------------------- UI -------------------------------------------------------------
 
 window = Tk()
 window.title("Flashy")
@@ -52,7 +59,6 @@ card_back_img = PhotoImage(file="images/card_back.png")
 card_background = canvas.create_image(400, 263, image=card_front_img)
 card_title = canvas.create_text(400, 150, text="", font=("Ariel", 40, "italic"))
 card_word = canvas.create_text(400, 263, text="", font=("Ariel", 60, "bold"))
-
 canvas.config(bg=BACKGROUND_COLOR, highlightthickness=0)
 canvas.grid(row=0, column=0, columnspan=2)
 
@@ -68,5 +74,7 @@ next_card()
 
 window.mainloop()
 
+#-------------------------------------------------------- Future Work ---------------------------------------------
 
-
+# Solving the error you get at the end
+# Diversifying it for more languages

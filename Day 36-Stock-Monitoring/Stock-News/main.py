@@ -4,12 +4,12 @@ import requests
 STOCK_NAME = "TSLA"
 COMPANY_NAME = "Tesla Inc"
 
-News_API_Key = "9c17299b1b4f46609aba430f1c471d91"
-Stock_API_Key = "G4FGUZ9J3DDHXGBT"
+News_API_Key = "Your Key"
+Stock_API_Key = "Your Key"
 
-Account_SID = "AC3cc0660bec8ec35159d570a1e4237a04"
-Auth_Token = "c28c83d570ec564e8b9bfaec6788d928"
-Number = "+13607806746"
+Account_SID = "Your ID"
+Auth_Token = "Your Key"
+Number = "Your Number"
 
 STOCK_ENDPOINT = "https://www.alphavantage.co/query"
 NEWS_ENDPOINT = "https://newsapi.org/v2/everything"

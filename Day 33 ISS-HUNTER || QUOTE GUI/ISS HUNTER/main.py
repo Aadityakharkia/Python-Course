@@ -5,8 +5,8 @@ import time
 
 #-------------------------------------------------------- Defining passwords and username ----------------------------------
 
-MY_EMAIL = "aadityakharkiates@gmail.com"
-MY_PASSWORD = "pxduwpgyfmtvtzmj"
+MY_EMAIL = "Your_Mail_ID"
+MY_PASSWORD = "Your_Password"
 MY_LAT = 30.316496
 MY_LONG = 78.032188
 
@@ -53,7 +53,7 @@ while True:
         connection.login(MY_EMAIL, MY_PASSWORD)
         connection.sendmail(
             from_addr=MY_EMAIL,
-            to_addrs="aadityakharkia10@gmail.com",
+            to_addrs="Your Mail",
             msg="Subject:Look Up👆\n\nThe ISS is above you in the sky."
         )
 
