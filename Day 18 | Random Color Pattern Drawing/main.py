@@ -1,5 +1,9 @@
+# Random Color pattern drawing
+
 import turtle as turtle_module
 import random
+
+#----------------------------------------------- Setting Up Turtle Environment ------------------------------------------
 
 turtle_module.colormode(255)
 tim = turtle_module.Turtle()

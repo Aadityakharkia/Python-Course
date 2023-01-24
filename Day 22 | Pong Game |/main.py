@@ -1,8 +1,12 @@
+# Pong Game
+
 from turtle import Turtle,Screen
 from paddle import Paddle
 from ball import Ball
 import time
 from scoreboard import Score
+
+# --------------------------- Setting up screen and calling for functions ------------------------
 
 screen = Screen()
 screen.bgcolor("black")
@@ -17,11 +21,14 @@ score = Score()
 
 screen.listen()
 
+# ----------------------------------------- Defining Keys --------------------------------------
+
 screen.onkey(l_paddle.go_up, "w")
 screen.onkey(l_paddle.go_down, "s")
 screen.onkey(r_paddle.go_up, "Up")
 screen.onkey(r_paddle.go_down, "Down")
 
+# ---------------------------------------- Functioning the game --------------------------------
 
 speed = 0.1
 is_game_on = True

@@ -1,21 +1,28 @@
+# This Game is based on crossing the turtle without hitting with a car.
+# After completing a level the speed of the car increases.
+
 import time
 from turtle import Screen
 from player import Player
 from car_manager import CarManager
 from scoreboard import Scoreboard
 
+#------------------------------- Creating Screen -----------------------------
+
 screen = Screen()
 screen.setup(width=600, height=600)
 screen.tracer(0)
 screen.bgcolor("black")
 screen.title("Turtle Game")
-
+#------------------------------- Calling for functions------------------------
 player = Player()
 car_manager = CarManager()
 scoreboard = Scoreboard()
 
 screen.listen()
 screen.onkey(player.move, "w")
+
+#------------------------------- Functions ------------------------------------
 
 game_is_on = True
 while game_is_on:

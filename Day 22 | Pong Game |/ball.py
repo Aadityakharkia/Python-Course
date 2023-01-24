@@ -1,3 +1,5 @@
+# Creating class for Ball
+
 from turtle import Turtle
 
 class Ball(Turtle):
