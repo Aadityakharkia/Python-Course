@@ -1,4 +1,4 @@
-'''import random
+import random
 a= input("Please enter all the names seperated by comma  ")
 b = a.split(",")
 c=len(b) 
@@ -15,4 +15,4 @@ horizontal = int(position[0])
 vertical = int(position[1])
 
 print(map[vertical-1])
-'''
+
