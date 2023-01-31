@@ -14,6 +14,8 @@ Spotify_Clint_id = "f34c2de437994f4095b0665fef6e3995"
 Spotify_Clint_Secret = "672bc2fd45884de39ff11bbfc649a5ff"
 Spotify_API_URL = "https://api.spotify.com/v1"
 
+ # ------------------- Read the API to understand the parameters ------------------
+
 sp = spotipy.Spotify(
     auth_manager=SpotifyOAuth(
         scope="playlist-modify-private",
@@ -26,12 +28,15 @@ sp = spotipy.Spotify(
 )
 user_id = sp.current_user()["id"]
 
+#---------------------------------------- Web Scrapping ------------------------------
 
 response = requests.get(URL + date)
 
 soup = BeautifulSoup(response.text, 'html.parser')
-song_names_spans = soup.find_all("span", class_="chart-element__information__song")
-song_names = [song.getText() for song in song_names_spans]
+song_names_spans = soup.find_all("div", class_="o-chart-results-list-row-container")
+song_names = [container.h3.getText().strip() for container in song_names_spans]
+
+print(song_names)
 
 song_uris = []
 year = date.split("-")[0]
@@ -49,3 +54,8 @@ playlist = sp.user_playlist_create(user=user_id, name=f"{date} Billboard 100", p
 print(playlist)
 
 sp.playlist_add_items(playlist_id=playlist["id"], items=song_uris)
+
+# ----------------------------------------- Description ----------------------------------------
+
+# This was one of the hardest project i have ever done, had to take help from the discord section in order to get the exacct address of the element
+# In the web i am looking for. SharahZ helped me find the exact address.
