@@ -30,9 +30,9 @@ print(price_as_float)
 
 BUY_PRICE = 2000
 
-Host_Email_ID = "aadityakharkiatest@gmail.com"
-Receivers_Email_Id = "aadityakharkia10@gmail.com"
-Password = "pxduwpgyfmtvtzmj"
+Host_Email_ID = "Your MAil ID"
+Receivers_Email_Id = "Receivers Mail ID"
+Password = "Your Password"
 
 if price_as_float < BUY_PRICE:
     message = f"AP-Calculus-Premium-2022-2023 is now {price}"
