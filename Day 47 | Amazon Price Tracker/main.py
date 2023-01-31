@@ -28,14 +28,14 @@ print(price_as_float)
 
 # -------------------------------------------------- Emailing and monotiring ---------------------------------------------
 
-BUY_PRICE = 2000
+BUY_PRICE = 1800
 
-Host_Email_ID = "Your MAil ID"
+Host_Email_ID = "Senders Mail ID"
 Receivers_Email_Id = "Receivers Mail ID"
-Password = "Your Password"
+Password = "Password for mail auth."
 
 if price_as_float < BUY_PRICE:
-    message = f"AP-Calculus-Premium-2022-2023 is now {price}"
+    message = f"AP-Calculus-Premium-2022-2023 is now {price_without_currency}"
 
     with smtplib.SMTP("smtp.gmail.com", port=587) as connection:
         connection.starttls()
@@ -43,5 +43,5 @@ if price_as_float < BUY_PRICE:
         connection.sendmail(
             from_addr=Host_Email_ID,
             to_addrs=Receivers_Email_Id,
-            msg=f"Subject:Amazon Price Alert!\n\n The Price Has Dropped ! Go and buy it Now ! \n\n{message}"
+            msg=f"Subject:Amazon Price Alert!\n\n The Price Has Dropped ! Go and buy it Now ! \n\n{message} \n\n {Amazon_Product_Url}"
         )
