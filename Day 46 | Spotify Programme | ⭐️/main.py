@@ -10,8 +10,8 @@ from spotipy.oauth2 import SpotifyOAuth
 URL = "https://www.billboard.com/charts/hot-100/"
 date = input(f"Please Enter the Date in the formate of YYYY-MM-DD\n")
 
-Spotify_Clint_id = "f34c2de437994f4095b0665fef6e3995"
-Spotify_Clint_Secret = "672bc2fd45884de39ff11bbfc649a5ff"
+Spotify_Clint_id = "Your ID"
+Spotify_Clint_Secret = "Your ID"
 Spotify_API_URL = "https://api.spotify.com/v1"
 
  # ------------------- Read the API to understand the parameters ------------------
