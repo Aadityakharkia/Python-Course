@@ -5,9 +5,12 @@ import time
 chrome_driver_path = "/Users/AadityaKharkia/chromedriver/chromedriver"
 driver = webdriver.Chrome(executable_path=chrome_driver_path)
 
-url ="https://orteil.dashnet.org/experiment/cookieclicker/"
-
-cookie = driver.find_element(by=By.ID, value="bigCookie")
+url ="http://orteil.dashnet.org/experiments/cookie/"
 
 driver = webdriver.Chrome(chrome_driver_path)
 driver.get(url=url)
+
+cookie = driver.find_element(By.CSS_SELECTOR, "#cookie")
+
+while True:
+    cookie.click()
