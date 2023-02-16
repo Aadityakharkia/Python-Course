@@ -2,8 +2,9 @@ import time
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 
-
-chrome_driver_path = "C:/Users/PC 28/Desktop/chromedriver/chromedriver.exe"
+Username = "aadityakharkia10@gmail.com"
+Password_link = "Aljs32!1#22Aka@2112Sa@168913"
+chrome_driver_path = "/Users/AadityaKharkia/chromedriver/chromedriver"
 
 driver = webdriver.Chrome(executable_path=chrome_driver_path)
 
@@ -15,16 +16,18 @@ Sign_in = driver.find_element(By.CLASS_NAME,"nav__button-secondary")
 Sign_in.click()
 time.sleep(3)
 
-Email = driver.find_element(By.ID, "username").send_keys("aadityakharkia10@gmail.com")
-Password = driver.find_element(By.ID,"password").send_keys("")
+Email = driver.find_element(By.ID, "username").send_keys(Username)
+Password = driver.find_element(By.ID,"password").send_keys(Password_link)
 
 sign = driver.find_element(By.CLASS_NAME, "btn__primary--large")
 sign.click()
 time.sleep(3)
 
-job1 = driver.find_element(By.ID, "ember194")
+job1 = driver.find_element(By.ID, "ember190")
 job1.click()
-
+time.sleep(2)
+apply = driver.find_element(By.CLASS_NAME,"jobs-s-apply")
+apply.click()
 
 time.sleep(3)
 driver.quit()
