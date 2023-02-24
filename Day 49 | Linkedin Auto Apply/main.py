@@ -2,8 +2,8 @@ import time
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 
-Username = "aadityakharkia10@gmail.com"
-Password_link = "Aljs32!1#22Aka@2112Sa@168913"
+Username = "Your_Mail"
+Password_link = "Your_Password"
 chrome_driver_path = "/Users/AadityaKharkia/chromedriver/chromedriver"
 
 driver = webdriver.Chrome(executable_path=chrome_driver_path)
