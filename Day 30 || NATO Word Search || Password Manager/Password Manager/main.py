@@ -97,7 +97,7 @@ email = Label(text="Email/Username:")
 email.grid(row=2,column=0)
 email_input = Entry(width=35)
 email_input.grid(row=2,column=1,columnspan=2)
-email_input.insert(0,"aadityakharkia10@gmail.com")
+email_input.insert(0,"Your Default Email")
 
 password = Label(text="Password")
 password.grid(row=3,column=0)
